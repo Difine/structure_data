@@ -1,3 +1,5 @@
+from src.sum_category_as_tuples import sum_category_as_tuples
+
 _sales_data = [
     {
         "category": "dairy products",
@@ -43,13 +45,12 @@ _sales_data = [
     }
 ]
 
-
 def test_sum_category_as_tuples():
-    """
-        Показать сумму покупок по категориями. Отсортировать категории по возрастанию суммы
-    """
-    actual = get_sorted_category_sum(_sales_data)
-    assert actual == [("bakery", 115),
-                      ("drinks", 390),
-                      ("dairy products", 440),
-                      ]
+        """
+            Показать сумму покупок по категориями. Отсортировать категории по возрастанию суммы
+        """
+        actual = sum_category_as_tuples(_sales_data)
+        assert actual == [("bakery", 115),
+                          ("drinks", 390),
+                          ("dairy products", 440),
+                          ]
