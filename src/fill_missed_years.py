@@ -23,14 +23,4 @@ def fill_missed_years(data: dict[str, int]) -> dict[str, float]:
 
     return {str(k): v for k, v in sorted(result_data.items())}
 
-yearly_sales = {
-        "2015": 50,
-        "2018": 65,
-        "2019": 120,
-        "2023": 160,
-        "2025": 200
-    }
-
-fill_missed_years(yearly_sales)
-
 
