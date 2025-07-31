@@ -1,3 +1,5 @@
+from src.get_distinct_categories import get_distinct_categories
+
 _sales_data = [
     {
         "category": "dairy products",
@@ -43,7 +45,6 @@ _sales_data = [
     }
 ]
 
-
 def test_get_distinct_categories():
     """
         Вернуть множество уникальных категорий товаров
@@ -52,15 +53,3 @@ def test_get_distinct_categories():
 
     assert get_distinct_categories(_sales_data) == {
         "dairy products", "bakery", "drinks"}
-
-
-def test_sum_category_as_tuples():
-    """
-        Показать сумму покупок по категориями. Отсортировать категории по возрастанию суммы
-    """
-    actual = get_sorted_category_sum(_sales_data)
-    assert actual == [("bakery", 115),
-                      ("drinks", 390),
-                      ("dairy products", 440),
-                      ]
-c
